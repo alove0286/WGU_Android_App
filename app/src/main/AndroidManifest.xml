@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.loveapps">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.loveapps.activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.loveapps.activities.TermsActivity"
+            android:label="@string/title_activity_terms"
+            android:parentActivityName="com.loveapps.activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.loveapps.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.loveapps.activities.CoursesActivity"
+            android:label="@string/title_activity_courses"
+            android:parentActivityName="com.loveapps.activities.TermsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.loveapps.activities.TermsActivity" />
+        </activity>
+        <activity
+            android:name="com.loveapps.activities.EditTermActivity"
+            android:label="Display Term"
+            android:parentActivityName="com.loveapps.activities.TermsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.loveapps.activities.TermsActivity" />
+        </activity>
+        <activity
+            android:name="com.loveapps.activities.EditCourseActivity"
+            android:label="Display Course"
+            android:parentActivityName="com.loveapps.activities.CoursesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.loveapps.activities.CoursesActivity" />
+        </activity>
+        <activity
+            android:name="com.loveapps.activities.AssessmentsActivity"
+            android:label="@string/title_activity_assessments"
+            android:parentActivityName="com.loveapps.activities.EditCourseActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.loveapps.activities.EditCourseActivity" />
+        </activity>
+        <activity
+            android:name="com.loveapps.activities.EditAssessmentActivity"
+            android:label="Display Assessment"
+            android:parentActivityName="com.loveapps.activities.AssessmentsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.loveapps.activities.AssessmentsActivity" />
+        </activity>
+        <activity
+            android:name="com.loveapps.activities.NotesActivity"
+            android:label="@string/title_activity_notes"
+            android:parentActivityName="com.loveapps.activities.EditCourseActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.loveapps.activities.EditCourseActivity" />
+        </activity>
+        <activity
+            android:name="com.loveapps.activities.SettingsActivity"
+            android:label="Settings" >
+        </activity>
+        <activity android:name="com.loveapps.activities.EditNoteActivity"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>
